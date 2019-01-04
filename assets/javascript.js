@@ -16,7 +16,7 @@
             // console.log("I love " + vegetables[i]);}
 
 // Class Live Examples:
-    var namesArr = ["Sophie", "George", "Waldo", "Stephen", "Henry"]; // Global scope variable.
+//    var namesArr = ["Sophie", "George", "Waldo", "Stephen", "Henry"]; // Global scope variable.
     // Function to check if string exists within an array: 
 //        function checkIfExists(keyword) { // Function created to check for a speicifc keyword.
 //            var found = false;
@@ -39,26 +39,83 @@
 //        console.log(result5); // Will return -1 since "James" does not exist in array and therefore does not have an index value.
     
     // Function to filter arrays:
-        function filterArray(arrayName, letter) {
-            var result = [];
-            for (var i = 0; i < arrayName.length; i++) {
-                if (arrayName[i].charAt(0).toLowerCase() === letter.toLowerCase()) {
-                    result.push(arrayName[i]);
+//        function filterArray(arrayName, letter) {
+//            var result = [];
+//            for (var i = 0; i < arrayName.length; i++) {
+//                if (arrayName[i].charAt(0).toLowerCase() === letter.toLowerCase()) {
+//                    result.push(arrayName[i]);
+//                }
+//            } return result;
+//        }
+//        var filteredArray = filterArray(namesArr, 's');
+//        console.log(filteredArray); // Returns "Sophie" and "Stephen" as they both begin with "s" in the array.
+//
+//        var newArray = namesArr.filter(function(name){
+//            if (name === "Sophie"){
+//                return name;
+//            }
+//        });
+//
+//        var x = 5;
+//        var y = x; // Primitive types. Variable assignment are based on real value.
+//        var pets = ["cat", "dog", "rabbit"];
+//        var pets2 = pets; // Variable assignment is based on reference. 
+//        pets2.push("giraffe");
+//        var pets2 = [...pets]; // This method prevents variables from pointing to the same place; ie the same source of memory.
+
+    // Objects. Create informational objects for individuals in session:
+
+        var alperInfo = {
+            name: 'Alper',
+            profession: 'Developer',
+            favoritePizza: 'Cheese'
+        };
+
+        var timInfo = {
+            name: 'Tim',
+            profession: 'Coder',
+            favoritePizza: 'Pepperoni'
+        };
+
+        var hoomanInfo = {
+            name: 'Hooman',
+            profession: 'Sales',
+            favoritePizza: '5Cheese',
+            favoriteColors: [
+                {
+                    name: 'blue'
+                },
+                {
+                    name: 'purple'
                 }
-            } return result;
-        }
-        var filteredArray = filterArray(namesArr, 's');
-        console.log(filteredArray); // Returns "Sophie" and "Stephen" as they both begin with "s" in the array.
+            ]
+        };
 
-        var newArray = namesArr.filter(function(name){
-            if (name === "Sophie"){
-                return name;
+        var people = [alperInfo, timInfo, hoomanInfo];
+        people[2].favoriteColors[1].name
+
+        var iceCreamColors = {
+            chocolate: 'brown',
+            vanilla: 'white',
+            strawberry: 'red'
+        };
+        Object.keys(iceCreamColors); // Console log of this will provide a list of key names, ie chocolate, vanilla, strawberry.
+        Object.values(iceCreamColors); // Console log of this will provide a list of values, ie brown, white, red.
+
+        var vals = Object.values(iceCreamColors); // Sets the specific 'values' in the object to a variable.
+        Object.entries(iceCreamColors); // Console log of this will return nested arrays of key names and values.
+
+        var myCat = {
+            name: 'Bella',
+            age: '3',
+            sleep: function(hr) {
+                console.log('sleeping for ' + hr + 'hours...');
+            },
+            scream: function() {
+                console.log('meow');
             }
-        });
+        };
+        myCat.name // Console log will output value 'Bella' for key 'name' in object 'myCat'
+        myCat.age // Console log will output value '3' for key 'age' in object 'myCat'
+        myCat.sleep(5); // Console log will output 'sleeping for 5 hours...'
 
-        var x = 5;
-        var y = x; // Primitive types. Variable assignment are based on real value.
-        var pets = ["cat", "dog", "rabbit"];
-        var pets2 = pets; // Variable assignment is based on reference. 
-        pets2.push("giraffe");
-        var pets2 = [...pets]; // This method prevents variables from pointing to the same place; ie the same source of memory.
