@@ -119,3 +119,6 @@
         myCat.age // Console log will output value '3' for key 'age' in object 'myCat'
         myCat.sleep(5); // Console log will output 'sleeping for 5 hours...'
 
+        // **IMPORTANT NOTE** 
+            // Technical Interview Question: Be weary of questions regarding global scoping:
+                // Ex: redefining "variables" inside of a function can change the global variable if not properly declared with 'var' inside function.
